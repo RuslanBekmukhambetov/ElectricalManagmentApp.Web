@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ElectricalManagmentApp.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c37c354303d4e42e2e255a1d66690c269cf50a8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a866005e96fa0bf5280f5639d1bd3ca40eafc1ed")]
 [assembly: System.Reflection.AssemblyProductAttribute("ElectricalManagmentApp.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ElectricalManagmentApp.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -15,10 +15,26 @@ namespace ElectricalManagmentApp.Web.Data
         public DbSet<MeterPoint> MeterPoints { get; set; }
         public DbSet<Consumer> Consumers { get; set; }
         public DbSet<MeterReadings> MetersReadings { get; set; }
-        /*
-        protected override void OnModeCreating (ModelBuilder modelBuilder)
+        
+        protected void OnModeCreating (ModelBuilder modelBuilder)
         {
             base.OnModelCreating (modelBuilder);
-        }*/
+
+            modelBuilder.Entity<MeterPoint>()
+                .HasOne(mp => mp.ElectricityMeter)
+                .WithOne(em => em.MeterPoint)
+                .HasForeignKey<ElectricityMeter>(em => em.MeterPointId)
+                .IsRequired(false);
+
+            modelBuilder.Entity<MeterPoint>()
+                .HasOne(mp => mp.Consumer)
+                .WithMany(c => c.MeterPoints)
+                .HasForeignKey(mp => mp.ConsumerId);
+
+            modelBuilder.Entity<MeterReadings>()
+                .HasOne(mr => mr.MeterPoint)
+                .WithMany(mp => mp.Readings)
+                .HasForeignKey(mr => mr.MeterPointId);
+        }
     }
 }

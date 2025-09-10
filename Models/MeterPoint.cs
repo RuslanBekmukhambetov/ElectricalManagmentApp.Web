@@ -6,7 +6,6 @@
         public string Address { get; set; } = string.Empty;
         public double CurrentTransoformationRatio { get; set; } = 1.0;
         public double VoltageTransoformationRatio { get; set; } = 1.0;
-        public Guid ElectricityMeterId { get; set; }
         public ElectricityMeter? ElectricityMeter { get; set; }
         public Guid ConsumerId { get; set; }
         public Consumer? Consumer { get; set; }
